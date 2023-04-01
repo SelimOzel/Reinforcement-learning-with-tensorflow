@@ -16,8 +16,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow as tf
 
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
-env = gym.make('Pendulum-v0')
+env = gym.make('Pendulum-v1')
 env = env.unwrapped
 env.seed(1)
 MEMORY_SIZE = 3000
